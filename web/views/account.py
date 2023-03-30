@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
 """
-ÕË»§Ïà¹Ø£º×¢²á¡¢µÇÂ¼¡¢×¢Ïú¡¢¶ÌĞÅ
+è´¦æˆ·ç›¸å…³ï¼šæ³¨å†Œã€ç™»å½•ã€æ³¨é”€ã€çŸ­ä¿¡
 """
+from django.shortcuts import render, HttpResponse
+from web.forms.account import RegisterModelForm
+
+
+def register(request):
+    form = RegisterModelForm()
+    return render(request, 'register.html', {'form': form})
